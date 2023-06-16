@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+.myheader {
+    color: white;
+    background-color: #4C27E0;
+    width: auto;
+    height: 15vh;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.branding > h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
