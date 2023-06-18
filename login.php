@@ -1,26 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>connexion</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-</head>
-<body>
-<?php include 'template/header.php' ?>    
-        <div class="formContent">
-            <form action="">
-                <h2> formulaire </h2>
-                    <label for="">Pseudo</label> 
-                    <input class="myLoginInput" type="text" placeholder="  your pseudo " > 
-                    <label for="">mot de passe</label>
-                    <input class="myLoginInput" type="password" name="" id="" placeholder="  ********  ">
-            </form>
-        </div>
 
+<section class="bg-black-transparent position-fixed top-0 w-100 h-100
+                d-flex align-items-center justify-content-center"
+                id="hoverSection">
+
+                <!-- un bouton pour fermer la section -->
+                <button class="btn bg-danger position-absolute top-0 end-0" onclick="closeSignIn()">X</button> 
+    <div>
+        <!-- Login form -->
+        <div id="sign_in" class="rounded-3 bg-white border border-info p-5 h-full">
+            <form   class="d-flex flex-column" method="POST" action="template/login_back.php"
+                    enctype="multipart/form-data">
+                <h2 class="fw-bold fs-3"> S'AUTHENTIFIÉ </h2>
+                <input class="my-3 p-1 rounded-3 border-2 border-primary no-outline" type="email"
+                        name="mail" placeholder="Email" 
+                        autocomplete="off"
+                        required />
+                <input  class="p-1 rounded-3 border-2 border-primary no-outline" type="password"
+                        name="password" placeholder="Mot de passe" required>
+                <input type="submit" value="connexion" class="my-3 bg-primary py-1 text-white border-0 rounded-3" />
+            </form>
+            <!-- Need help ? -->
+            <p class="mb-0 ">
+                si vous n'avez pas de compte
+                <button type="button" class="text-primary border-0 bg-transparent"
+                        onclick="openSignUp()">
+                        inscrivez-vous
+                </button>
+            </p>
+        </div>
+        <!-- SIGN UP form -->
+        <div id="sign_up" class="d-none rounded-3 bg-white border border-info p-5 h-full">
+            <form   class="d-flex flex-column" method="POST" action="template/registered.php"
+                    enctype="multipart/form-data">
+                <h2 class="fw-bold fs-3"> S'INSCRIRE </h2>
+                <input  class="my-3 p-1 rounded-3 border-2 border-primary no-outline" type="text"
+                        name ="nom"
+                        placeholder="Nom & Prénoms" />
+                <input  class="p-1 rounded-3 border-2 border-primary no-outline" type="text"
+                        name ="pseudo"
+                        placeholder="Pseudo">
+                <input  class="my-3 p-1 rounded-3 border-2 border-primary no-outline" type="email"
+                        name="mail" placeholder="Email">
+                <input  class="my-3 p-1 rounded-3 border-2 border-primary no-outline" type="file"
+                        name="avatar" id="avatar">
+                <input  class="p-1 rounded-3 border-2 border-primary no-outline" type="password"
+                        name = "my_password"
+                        placeholder="Mot de passe"
+                        max="20" min="0">
+                <input type="submit" value="inscription" class="my-3 bg-primary py-1 text-white border-0 rounded-3" />
+            </form>
+            <!-- Need help ? -->
+            <p class="mb-0 ">
+                Vous avez déjà un compte ?
+                <button type="submit" class="text-primary border-0 bg-transparent" onclick="openSignIn()">
+                     Connectez-vous
+                </button>
+            </p>
+        </div>
+    </div>
     <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
-</body>
-</html>
+</section>

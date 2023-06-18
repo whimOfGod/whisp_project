@@ -1,0 +1,12 @@
+.avatarIcon {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,17 @@
+ <textarea   class="flex-grow-1 bg-secondary-subtle no-outline border-0"
+                                    name="tweet"
+                                    placeholder="Ecrivez quelque chose..."></textarea>
+                        <!-- Add image button and tag -->
+                        <figure class="d-flex flex-column">
+                            <!-- Image -->
+                            <i  class="fa-solid fa-image w-20 cursor-pointer icon-color-b" onclick="imageFile()">
+                                <input  type="file" 
+                                        name="image" 
+                                        id="image" 
+                                        class="d-none" />
+                            </i>
+                         
+                            <!-- Tag -->
+                            <i      class="fa-solid fa-tags w-20 pt-2 cursor-pointer icon-color-o" >
+                            </i>
+                        </figure>
